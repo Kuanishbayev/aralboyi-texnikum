@@ -15,16 +15,17 @@ mongoose.connect('mongodb://localhost:27017/telegram_bot', {
 
 // Define User schema and model
 const UserSchema = new mongoose.Schema({
-    first_name: { type: String, required: true },
-    last_name: { type: String, required: true },
-    middle_name: { type: String, required: true },
-    date_of_birth: { type: String, required: true },
-    phone_number: { type: String, required: true },
-    secondary_phone_number: { type: String, required: true },
+    ism: { type: String, required: true },
+    familiya: { type: String, required: true },
+    otasiningIsmi: { type: String, required: true },
+    tugilganSanasi: { type: String, required: true },
+    telefonRaqami: { type: String, required: true },
+    qoshimchaRaqam: { type: String, required: true },
     pasportSeriyaRaqami: { type: String, required: true },
-    direction: { type: String, required: true },
-    type_of_education: { type: String, required: true },
+    yonalish: { type: String, required: true },
+    talimTuri: { type: String, required: true },
     source: { type: String, default: 'telegram' },
+    dtmTestBali: { type: String, required: true },
     created_at: { type: Date, default: Date.now },
     updated_at: { type: Date, default: Date.now }
 });
